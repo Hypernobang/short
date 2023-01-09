@@ -1,0 +1,42 @@
+print('**************************Star Travels Pvt. Ltd.**************************')
+print('\t \t \t Destination \t \t \t, ')
+print('\t \t \t Agra(AG)\t\t\t\t Price:1250')
+print('\t \t \t New Delhi(ND)\t\t\t\t Price:950')
+print('**************************Sales Criteria**************************')
+print('\t \t \t Online Bookign Discount(OL)\t\t Discount:10%')
+print('\t \t \t Counter Booking Discount(CL)\t\t Discount:5%')
+print('**************************Star Travels Pvt. Ltd. Sales Counter**************************')
+choice = 'y'
+while choice == 'y':
+    passenger_name = input("Enter booking agent name: ")
+    destination_code = input('Enter destination code: ')
+    no_of_cus = int(input('Enter no. of passengers: '))
+    booking_code = input("Enter booking code: ")
+    if destination_code == 'AG' and booking_code == 'OL':
+        total = no_of_cus*1250;
+        dis = (total/100)*10
+        amount = total-dis
+        print('Total amount to be paid: ', amount)
+        choice = input('Do you wish to continue? (y/n): ')
+    elif destination_code == 'AG' and booking_code == 'CL':
+        total = no_of_cus*1250
+        dis = (total/100)*5
+        amount = total-dis
+        print('Total amount to be paid: ', amount)
+        choice = input('Do you wish to continue? (y/n): ')
+    elif destination_code == 'ND' and booking_code == 'OL':
+        total = no_of_cus*950
+        dis = (total/100)*10
+        amount = total-dis
+        print('Total amount to be paid: ', amount)
+        choice = input('Do you wish to continue? (y/n): ')
+    elif destination_code == 'ND' and booking_code == 'CL':
+        total = no_of_cus*950
+        dis = (total/100)*5
+        amount = total-dis
+        print('Total amount to be paid: ', amount)
+        choice = input('Do you wish to continue? (y/n): ')
+    else:
+        print('Enter valid details only')
+        break
+
